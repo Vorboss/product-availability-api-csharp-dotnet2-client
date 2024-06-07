@@ -42,7 +42,7 @@ IF %ERRORLEVEL% NEQ 0 (
 
 :: Compile the project
 echo Compiling the project...
-csc -sdk:2 -reference:"vendor\Newtonsoft.Json.7.0.1\lib\net20\Newtonsoft.Json.dll;vendor\RestSharp.Net2.1.1.11\lib\net20\RestSharp.Net2.dll;System.Runtime.Serialization.dll" -target:library -out:bin\Com.Vorboss.ProductAvailability.dll -recurse:"src\*.cs" -doc:bin\Com.Vorboss.ProductAvailability.xml -platform:anycpu >nul 2>&1
+csc -reference:"vendor\Newtonsoft.Json.7.0.1\lib\net20\Newtonsoft.Json.dll;vendor\RestSharp.Net2.1.1.11\lib\net20\RestSharp.Net2.dll;System.Runtime.Serialization.dll" -target:library -out:bin\Com.Vorboss.ProductAvailability.dll -recurse:"src\*.cs" -doc:bin\Com.Vorboss.ProductAvailability.xml -platform:anycpu >nul 2>&1
 IF %ERRORLEVEL% NEQ 0 (
     echo Compilation failed. Check that all references are correct and all source files are available.
     goto end
