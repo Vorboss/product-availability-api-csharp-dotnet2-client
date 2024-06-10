@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using System.Runtime.Serialization;
 using Newtonsoft.Json;
 
-namespace IO.Swagger.Model {
+namespace Com.Vorboss.ProductAvailability {
 
   /// <summary>
   /// 
@@ -48,11 +48,11 @@ namespace IO.Swagger.Model {
     public int? BandwidthProvisioned { get; set; }
 
     /// <summary>
-    /// Gets or Sets BandwidthCapactity
+    /// Gets or Sets BandwidthCapacity
     /// </summary>
-    [DataMember(Name="bandwidthCapactity", EmitDefaultValue=false)]
-    [JsonProperty(PropertyName = "bandwidthCapactity")]
-    public int? BandwidthCapactity { get; set; }
+    [DataMember(Name="bandwidthCapacity", EmitDefaultValue=false)]
+    [JsonProperty(PropertyName = "bandwidthCapacity")]
+    public int? BandwidthCapacity { get; set; }
 
     /// <summary>
     /// Gets or Sets Term
@@ -74,7 +74,7 @@ namespace IO.Swagger.Model {
       sb.Append("  LeadTimeDays: ").Append(LeadTimeDays).Append("\n");
       sb.Append("  Currency: ").Append(Currency).Append("\n");
       sb.Append("  BandwidthProvisioned: ").Append(BandwidthProvisioned).Append("\n");
-      sb.Append("  BandwidthCapactity: ").Append(BandwidthCapactity).Append("\n");
+      sb.Append("  BandwidthCapacity: ").Append(BandwidthCapacity).Append("\n");
       sb.Append("  Term: ").Append(Term).Append("\n");
       sb.Append("}\n");
       return sb.ToString();

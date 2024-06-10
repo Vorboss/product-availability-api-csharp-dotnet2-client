@@ -2,9 +2,9 @@ using System;
 using System.Collections.Generic;
 using RestSharp;
 using Com.Vorboss.ProductAvailability;
-using IO.Swagger.Model;
+using Com.Vorboss.ProductAvailability.Model;
 
-namespace IO.Swagger.Api
+namespace Com.Vorboss.ProductAvailability.Api
 {
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints

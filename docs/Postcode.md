@@ -1,4 +1,4 @@
-# IO.Swagger.Model.Postcode
+# Com.Vorboss.ProductAvailability.Model.Postcode
 ## Properties
 
 Name | Type | Description | Notes

@@ -1,4 +1,4 @@
-# IO.Swagger.Api.ProductAvailabilityApi
+# Com.Vorboss.ProductAvailability.Api.ProductAvailabilityApi
 
 All URIs are relative to */*
 
@@ -18,9 +18,9 @@ Check which products are available at the given postcode.
 ```csharp
 using System;
 using System.Diagnostics;
-using IO.Swagger.Api;
+using Com.Vorboss.ProductAvailability.Api;
 using Com.Vorboss.ProductAvailability;
-using IO.Swagger.Model;
+using Com.Vorboss.ProductAvailability.Model;
 
 namespace Example
 {

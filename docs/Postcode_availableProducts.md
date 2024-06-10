@@ -1,4 +1,4 @@
-# IO.Swagger.Model.PostcodeAvailableProducts
+# Com.Vorboss.ProductAvailability.Model.PostcodeAvailableProducts
 ## Properties
 
 Name | Type | Description | Notes
@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 **LeadTimeDays** | **int?** |  | [optional] 
 **Currency** | **string** |  | [optional] 
 **BandwidthProvisioned** | **int?** |  | [optional] 
-**BandwidthCapactity** | **int?** |  | [optional] 
+**BandwidthCapacity** | **int?** |  | [optional] 
 **Term** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
