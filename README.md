@@ -38,30 +38,43 @@ using Com.Vorboss.ProductAvailability.Model;
 ```csharp
 using System;
 using System.Diagnostics;
-using Com.Vorboss.ProductAvailability.Api;
 using Com.Vorboss.ProductAvailability;
 using Com.Vorboss.ProductAvailability.Model;
+using Com.Vorboss.ProductAvailability.Api;
 
-namespace Example
+
+namespace MyConsoleApp
 {
-    public class Example
+    class Program
     {
-        public void main()
+        private const string ApiKey = "MY_VORBOSS_API_KEY";
+
+        static void Main(string[] args)
         {
+            ApiClient client = new ApiClient("https://api.vorboss.com/");
+            client.AddDefaultHeader("Authorization", "Bearer " + ApiKey);
+            var apiInstance = new ProductAvailabilityApi(client);
 
-
-            var apiInstance = new ProductAvailabilityApi();
-            var postcode = postcode_example;  // string | UK Postcode to check availability for.
+            var postcode = "EC2A2BS";  // string | UK Postcode to check availability for.
 
             try
             {
                 // Check a postcode
                 Postcode result = apiInstance.ConfirmPostcode(postcode);
-                Debug.WriteLine(result);
+                Console.WriteLine(result);
+
+                foreach (PostcodeAvailableProducts product in result.AvailableProducts)
+                {
+                    Console.WriteLine("Product Name: " + product.Name);
+                    Console.WriteLine("Product Lead Time: " + product.LeadTimeDays);
+                    Console.WriteLine("Product Price: " + product.Price);
+                    Console.WriteLine("Product Provisioned Bandwidth: " + product.BandwidthProvisioned);
+                    Console.WriteLine();
+                }
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ProductAvailabilityApi.ConfirmPostcode: " + e.Message );
+                Console.WriteLine("Exception when calling ProductAvailabilityApi.ConfirmPostcode: " + e.Message );
             }
         }
     }
